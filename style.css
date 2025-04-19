@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+
+}
+html, body{
+
+    width: 100%;
+    height: 100%;
+}
+
+/* Display flex is a single dimensional property.  */
+/* Display grid is a two demensional property.  */
+/* Display grid ka kaam display ka layout banana hota hai. */
+/* display grid row and column dono me divide kar deta hai.  */
+
+#main{
+    height: 100%;
+    width: 100%;
+    background-color:skyblue;
+    /* display: flex;
+    align-items: center; 
+    justify-content: center; */
+    display: grid;
+    /* grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows:  20% 20% 20% 20% 20%; */
+    grid-template-columns: 200px 200px;
+    grid-template-rows: 200px 200px;
+    /* align-items: center;
+    justify-items: center; */
+    /* justify-self : start child me baithe baithe chid ko hi control karna hai to justify self karenge */
+    align-items: space-between;
+    justify-content: space-evenly;
+    
+}
+.elem{
+    width: 60px;
+    height: 60px;
+    background-color: crimson;
+    border: 3px solid black;
+}
