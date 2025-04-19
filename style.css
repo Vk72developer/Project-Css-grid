@@ -2,42 +2,241 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
-
+    font-family:sans-serif;
 }
 html, body{
-
     width: 100%;
     height: 100%;
+
 }
-
-/* Display flex is a single dimensional property.  */
-/* Display grid is a two demensional property.  */
-/* Display grid ka kaam display ka layout banana hota hai. */
-/* display grid row and column dono me divide kar deta hai.  */
-
 #main{
     height: 100%;
     width: 100%;
-    background-color:skyblue;
-    /* display: flex;
-    align-items: center; 
-    justify-content: center; */
+    background-color: #dadada;
     display: grid;
-    /* grid-template-columns: 20% 20% 20% 20% 20%;
-    grid-template-rows:  20% 20% 20% 20% 20%; */
-    grid-template-columns: 200px 200px;
-    grid-template-rows: 200px 200px;
-    /* align-items: center;
-    justify-items: center; */
-    /* justify-self : start child me baithe baithe chid ko hi control karna hai to justify self karenge */
-    align-items: space-between;
-    justify-content: space-evenly;
+    grid-template-columns: 25% 25% 50%;
+    grid-template-rows: 26% 56% 18%;
+    overflow: hidden;
+}
+
+#left-top-left{
+    /* background-color: red; */
+    padding: 35px;
+}
+
+#left-top-right{
+    /* background-color: navy; */
+    /* align-content: center;
+    justify-content: center; */
+    justify-self: right;
+    padding: 38px;
+    text-align: right;
+}
+
+#left-top-right h4{
+    margin-bottom: 45px;
+    font-size: 20px;
+    font-weight: 600;
+}
+#left-top-right h5{
+    /* margin-bottom: 55px; */
+    font-size: 17px;
+    font-weight: 400;
+    color: #333;
+}
+
+#left-top-right h6{
+    display: none;
+}
+
+#right{
+    /* background-color: rgb(255, 0, 191); */
+    grid-column: 3;
+    grid-row: 1 / 4;
+    padding: 38px;
+    padding-right: 50px;
     
 }
-.elem{
-    width: 60px;
-    height: 60px;
-    background-color: crimson;
-    border: 3px solid black;
+
+#right video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#left-center{
+    /* background-color: royalblue; */
+    grid-column: 1 / 3;
+    padding: 40px;
+}
+
+#left-center h1{
+    font-size: 5.5vw;
+    text-transform: uppercase;
+    line-height: 5vw;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#left-center h1:nth-child(2n) {
+    /* background-color: red; */
+    text-align: center;
+}
+
+#left-bottom{
+    /* background-color: chartreuse; */
+    grid-column: 1 / 3;
+    padding: 38px;
+}
+
+#left-bottom p{
+ width: 70%;
+ font-size: 18px;
+ font-weight: 500;
+ color: #666;
+}
+
+#square{
+    height: 18px;
+    width: 18px;
+    rotate: 45deg;
+    background-color: black;
+}
+
+#arrow{
+    position: absolute;
+    top: 50%;
+    left: 52%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: orangered;
+    color: #fff;
+    padding: 38px;
+    border-radius: 50% 50%;
+}
+
+#arrow i{
+    font-size: 40px;
+    /* font-weight: 100; */
+}
+
+@media (max-width:600px){
+
+        #main{
+       
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 60px 30% 10%;
+        /* overflow: hidden; */
+    }
+
+    #right{
+        /* background-color: rgb(255, 0, 191); */
+        grid-column: 1 / 4;
+        grid-row:4;
+        padding: 20px;
+        padding-right: 20px;
+        
+    }
+
+    
+#left-top-left{
+    /* background-color: red; */
+    padding: 30px;
+}
+
+#left-top-right{
+    /* background-color: navy; */
+    /* align-content: center;
+    justify-content: center; */
+    justify-self: right;
+    padding: 28px;
+    text-align: right;
+}
+
+#left-top-right h4{
+    /* margin-bottom: 45px;
+    font-size: 20px;
+    font-weight: 600; */
+    display: none;
+}
+#left-top-right h5{
+    /* margin-bottom: 55px; */
+    /* font-size: 17px;
+    font-weight: 400;
+    color: #333; */
+    display: none;
+}
+
+#left-top-right h6{
+    display: initial;
+    font-size: 20px;
+}
+
+#right video{
+    height: 45vh;
+    width: 100%;
+    object-fit: cover;
+}
+
+#left-center{
+    /* background-color: royalblue; */
+    /* grid-column: 1 / 3; */
+    padding: 10px 20px;
+}
+
+#left-center h1{
+    font-size: 14vw;
+    line-height: 11.5vw;
+    /* text-transform: uppercase; */
+    /* font-weight: 600; */
+    /* font-family: Arial, Helvetica, sans-serif; */
+}
+
+#left-center h1:nth-child(2n) {
+    /* background-color: red; */
+    text-align: right;
+}
+
+#left-bottom{
+    /* background-color: chartreuse; */
+    /* grid-column: 1 / 3; */
+    padding: 5px 20px;
+}
+
+#left-bottom p{
+ width: 90%;
+ font-size: 11px;
+ font-weight: 700;
+ color: #666;
+}
+
+#square{
+    height: 15px;
+    width: 15px;
+    /* rotate: 45deg; */
+    /* background-color: rgb(0, 0, 0); */
+    /* background-color: brown; */
+}
+
+#arrow{
+    position: absolute;
+    top: 53%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(90deg);
+    /* display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: orangered;
+    color: #fff;  */
+    padding: 15px;
+    /* border-radius: 50% 50%; */
+}
+
+#arrow i{
+    font-size: 20px;
+    /* font-weight: 100; */
+}
+
 }
